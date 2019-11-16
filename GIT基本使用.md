@@ -5,6 +5,9 @@
 (3)使用命令 git commit -m “注释” 把文件提交到仓库  
 (4)如果临时修改文件，但`并未提交`，如果想看修改内容，使用 git diff文件名  
 ### 2.版本回退
-(1)查看文件修改的历史记录,使用git log
-   如果嫌显示信息太多，使用git log -pretty=online
+(1)查看文件修改的历史记录,使用git log，如果嫌显示信息太多，使用git log --pretty=online.  
+(2)如果想回退上个版本,使用git reset --hard HEAD^,如果想退回两个版本，使用git reset --hard HEAD^^.  
+(3)查看仓库的各个版本号，使用git reflog.  
+(4)想退回某个版本,使用git reset --hard 版本号
+
  
