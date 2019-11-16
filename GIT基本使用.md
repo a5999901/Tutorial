@@ -9,5 +9,5 @@
 (2)如果想回退上个版本,使用git reset --hard HEAD^,如果想退回两个版本，使用git reset --hard HEAD^^.  
 (3)查看仓库的各个版本号，使用git reflog.  
 (4)想退回某个版本,使用git reset --hard 版本号
-
+(5)如果在工作区修改了文件但还没有提交，如果想恢复修改前版本，用git checkout --(空格)文件名
  
