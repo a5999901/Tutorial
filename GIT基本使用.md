@@ -14,4 +14,8 @@
  (1)在工作目录中删除文件：rm 文件名   
  (2)如果已经提交了，除了rm命令以外，还要再commit一下才能在版本库中删除
 ### 4.远程仓库
- (1)本地Git仓库和github仓库间是通过
+ (1)本地Git仓库和github仓库间是通过SSH加密的,查看密钥指令：cat ~/.ssh/id_rsa.pub
+ (2)查看远程仓库用户信息，查看用户名git config user.name,查看用户注册邮箱git config user.email  
+ (3)把本地仓库与远程仓库分支关联：git remote add origin(空格)+github对应的推送地址   
+ (4)把本地库内容推送到远程库：git push -u origin master  
+    如果是第一次推送，需要加-u，git不但会把本地master分支内容推送到远程master分支，还会把本地的master分支和远程master分支关联，因此以后的推送或者拉取时可以简化。
