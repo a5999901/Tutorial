@@ -18,4 +18,6 @@
  (2)查看远程仓库用户信息，查看用户名git config user.name,查看用户注册邮箱git config user.email  
  (3)把本地仓库与远程仓库分支关联：git remote add origin(空格)+github对应的推送地址   
  (4)把本地库内容推送到远程库：git push -u origin master  
-    如果是第一次推送，需要加-u，git不但会把本地master分支内容推送到远程master分支，还会把本地的master分支和远程master分支关联，因此以后的推送或者拉取时可以简化。
+    如果是第一次推送，需要加-u，git不但会把本地master分支内容推送到远程master分支，还会把本地的master分支和远程master分支关联，因此以后的推送或者拉取时可以简化。  
+ (5)[问题]如何解决failed to push some refs to git  
+ 出现错误的主要原因是github中的README.md文件不在本地代码目录中，可以通过命令git pull --rebase origin master合并，再执行git push操作
