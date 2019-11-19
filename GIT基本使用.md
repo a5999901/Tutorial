@@ -20,4 +20,5 @@
  (4)把本地库内容推送到远程库：git push -u origin master  
     如果是第一次推送，需要加-u，git不但会把本地master分支内容推送到远程master分支，还会把本地的master分支和远程master分支关联，因此以后的推送或者拉取时可以简化。  
  (5)[问题]如何解决failed to push some refs to git  
- 出现错误的主要原因是github中的README.md文件不在本地代码目录中，可以通过命令git pull --rebase origin master合并，再执行git push操作
+ 出现错误的主要原因是在建立本地仓库后，与远程仓库的内容不一致导致的。因此在向远程库推送的时候，要先进行pull，让本地新建的库和远程同步：  
+ git pull origin master,然后再push命令
